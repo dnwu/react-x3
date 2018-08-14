@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import './index.scss'
 
-class Test extends Component {
+class InterDeploy extends Component {
     render() {
         return (
             <div>
-                das
+                21
             </div>
         );
     }
 }
 
-export default Test;
+export default InterDeploy;

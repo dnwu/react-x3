@@ -4,6 +4,7 @@ import App from './../App'
 import Main from './../containers/main'
 
 import DeviceActivation from './../pages/DeviceActivation'
+import InterDeploy from './../pages/InterDeploy'
 
 class IRouter extends React.Component {
     render() {
@@ -16,7 +17,7 @@ class IRouter extends React.Component {
                             <Main>
                                 <Switch>
                                     <Route path='/internet/activation' component={DeviceActivation} />
-                                    <Route path='/internet/deploy' component={DeviceActivation} />
+                                    <Route path='/internet/deploy' component={InterDeploy} />
 
                                     <Route path='/devicedeploy/face' component={DeviceActivation} />
                                     <Route path='/devicedeploy/carmera' component={DeviceActivation} />

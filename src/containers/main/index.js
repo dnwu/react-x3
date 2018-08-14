@@ -11,7 +11,10 @@ class Main extends Component {
         breadcrumb: ['入网配置','设备激活']
     };
     componentWillMount() {
+        // 刷新页面, 默认选中tab
         let hash = window.location.hash.replace(/#|\?.*$/g, '');
+        // 刷新页面默认展开tab
+        let defaultOpenKey = hash.match(/\/(\S*)\//)[1]
 
         window.addEventListener('hashchange',() => {
             let hash = window.location.hash.replace(/#|\?.*$/g, '');
@@ -19,7 +22,8 @@ class Main extends Component {
         })
 
         this.setState({
-            hash
+            hash,
+            defaultOpenKey
         })
     }
 
@@ -62,7 +66,7 @@ class Main extends Component {
         return (
             <Layout style={{ minHeight: '100vh' }}>
                 <Sider>
-                    <Nav hash = {this.state.hash}/>
+                    <Nav hash = {this.state.hash} defaultOpenKey={this.state.defaultOpenKey}/>
                 </Sider>
                 <Layout>
                     <Head/>

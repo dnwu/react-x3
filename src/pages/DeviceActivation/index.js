@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './index.scss'
-import { Form, Select, Input, Button, message } from 'antd';
+import { Form, Input, Button, message } from 'antd';
 const FormItem = Form.Item;
-const Option = Select.Option;
 
 class DeviceActivation extends Component {
     state = {

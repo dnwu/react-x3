@@ -6,13 +6,8 @@ import './index.scss'
 const SubMenu = Menu.SubMenu;
 class Nav extends Component {
     state = {
-        hash: ''
     }
-
-    componentWillMount(){
-        this.setState({
-            hash: this.props.hash
-        })
+    componentDidMount(){
     }
 
     menu = () => {
@@ -41,9 +36,10 @@ class Nav extends Component {
                 </div>
                 <Menu 
                     theme="dark" 
-                    defaultSelectedKeys={['/internet/activation']}
-                    defaultOpenKeys = {['internet']}
+                    defaultSelectedKeys={[this.props.hash]}
+                    defaultOpenKeys={[this.props.defaultOpenKey]}
                      mode="inline">
+                     
                     {this.menu()}
                 </Menu>
             </div>
