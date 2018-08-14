@@ -15,7 +15,8 @@ class Main extends Component {
         let hash = window.location.hash.replace(/#|\?.*$/g, '');
         // 刷新页面默认展开tab
         let defaultOpenKey = hash.match(/\/(\S*)\//)[1]
-
+        // 默认面包屑
+        this.breadcrumbItem(hash)
         window.addEventListener('hashchange',() => {
             let hash = window.location.hash.replace(/#|\?.*$/g, '');
             this.breadcrumbItem(hash)
