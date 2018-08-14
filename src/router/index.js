@@ -5,6 +5,7 @@ import Main from './../containers/main'
 
 import DeviceActivation from './../pages/DeviceActivation'
 import InterDeploy from './../pages/InterDeploy'
+import FaceManage from './../pages/FaceManage'
 
 class IRouter extends React.Component {
     render() {
@@ -19,7 +20,7 @@ class IRouter extends React.Component {
                                     <Route path='/internet/activation' component={DeviceActivation} />
                                     <Route path='/internet/deploy' component={InterDeploy} />
 
-                                    <Route path='/devicedeploy/face' component={DeviceActivation} />
+                                    <Route path='/devicedeploy/face' component={FaceManage} />
                                     <Route path='/devicedeploy/carmera' component={DeviceActivation} />
                                     <Route path='/devicedeploy/relay' component={DeviceActivation} />
 
