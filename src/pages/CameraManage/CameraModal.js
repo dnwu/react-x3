@@ -21,6 +21,7 @@ class CameraModal extends Component {
         this.setState({
             visible: false,
         });
+        this.props.sonCarmeraModal(false)
     }
     protocolChange = (e) => {
         // console.log(e.target.value);
@@ -51,8 +52,10 @@ class CameraModal extends Component {
         };
         return (
             < Modal
+                className='carmera-modal'
                 title={this.props.title}
                 visible={this.state.visible}
+                centered={true}
                 cancelText='取消'
                 okText='确定'
                 footer={null}

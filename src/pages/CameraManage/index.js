@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Pagination, Form } from 'antd'
 import './index.scss'
 import CameraModal from './CameraModal'
+import TestModal from './../../components/TestModal'
 const FormItem = Form.Item;
 
 
@@ -9,6 +10,7 @@ class CameraManage extends Component {
 
     state = {
         visible: false,
+        testModalVisible: false,
         modelTitle: '添加摄像头'
     }
     showModal = () => {
@@ -17,10 +19,25 @@ class CameraManage extends Component {
             modelTitle: '添加摄像头'
         });
     }
+    linkTest = () => {
+        this.setState({
+            testModalVisible: true
+        });
+    }
+    sonLinkTest = (control) => {
+        this.setState({
+            testModalVisible: control
+        });
+    }
     restCarmera =()=> {
         this.setState({
             visible: true,
             modelTitle: '修改摄像头'
+        });
+    }
+    sonCarmeraModal = (control) => {
+        this.setState({
+            visible: control
         });
     }
 
@@ -51,7 +68,7 @@ class CameraManage extends Component {
                         <p>解码:<span>正常</span></p>
                     </div>
                     <div className="link-test">
-                        <span className='blue'>测试</span>
+                        <span onClick={this.linkTest} className='blue'>测试</span>
                     </div>
                     <div className="operate">
                         <span onClick={this.restCarmera} className='blue'>修改</span>
@@ -84,8 +101,16 @@ class CameraManage extends Component {
                         <div className="operate">操作</div>
                     </div>
                     {/* 添加修改摄像头模态框 */}
-                    <CameraModal visible={this.state.visible} title= {this.state.modelTitle} />
+                    <CameraModal 
+                        visible={this.state.visible} 
+                        title= {this.state.modelTitle} 
+                        sonCarmeraModal = {this.sonCarmeraModal}
+                    />
                     {/* 测试模态框 */}
+                    <TestModal 
+                        testModalVisible = {this.state.testModalVisible}
+                        sonLinkTest = {this.sonLinkTest}
+                    />
                     <div className="body">
                         {this.listDom()}
                     </div>

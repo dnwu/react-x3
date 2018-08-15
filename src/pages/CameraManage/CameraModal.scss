@@ -1,11 +1,14 @@
-.ant-modal-content {
+.carmera-modal{
+
+    .ant-modal-content {
     .model-btn {
         display: flex;
-        .ant-btn{
+        .ant-btn {
             padding: 0 30px;
         }
-        .ant-btn:nth-of-type(2){
+        .ant-btn:nth-of-type(2) {
             margin-left: 60px;
         }
     }
+}
 }
