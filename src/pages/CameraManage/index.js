@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Pagination, Form } from 'antd'
+import { Button, Pagination } from 'antd'
 import './index.scss'
 import CameraModal from './CameraModal'
 import TestModal from './../../components/TestModal'
-const FormItem = Form.Item;
+import DeleteModal from './../../components/DeleteModal'
+// const FormItem = Form.Item;
 
 
 class CameraManage extends Component {
@@ -11,6 +12,7 @@ class CameraManage extends Component {
     state = {
         visible: false,
         testModalVisible: false,
+        deleteModalVisible: false,
         modelTitle: '添加摄像头'
     }
     showModal = () => {
@@ -27,6 +29,16 @@ class CameraManage extends Component {
     sonLinkTest = (control) => {
         this.setState({
             testModalVisible: control
+        });
+    }
+    deleteCarmera = () => {
+        this.setState({
+            deleteModalVisible: true
+        });
+    }
+    sonDeleteModal = () => {
+        this.setState({
+            deleteModalVisible: false
         });
     }
     restCarmera =()=> {
@@ -72,7 +84,7 @@ class CameraManage extends Component {
                     </div>
                     <div className="operate">
                         <span onClick={this.restCarmera} className='blue'>修改</span>
-                        <span className='red'>删除</span>
+                        <span onClick={this.deleteCarmera} className='red'>删除</span>
                     </div>
                 </div>
             )
@@ -110,6 +122,11 @@ class CameraManage extends Component {
                     <TestModal 
                         testModalVisible = {this.state.testModalVisible}
                         sonLinkTest = {this.sonLinkTest}
+                    />
+                    {/* 删除模态框 */}
+                    <DeleteModal 
+                        deleteModalVisible = {this.state.deleteModalVisible}
+                        sonDeleteModal = {this.sonDeleteModal}
                     />
                     <div className="body">
                         {this.listDom()}
