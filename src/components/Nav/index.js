@@ -13,7 +13,6 @@ class Nav extends Component {
         // 刷新页面默认展开tab
         let defaultOpenKey = hash.match(/\/(\S*)\//)[1]
 
-        console.log(hash,defaultOpenKey);
 
         this.setState({
             hash,
@@ -45,7 +44,6 @@ class Nav extends Component {
                 <div className="logo" >
                     TERMINUS
                 </div>
-                {console.log(this.state.hash)}
                 <Menu
                     theme="dark"
                     defaultSelectedKeys={[this.state.hash]}

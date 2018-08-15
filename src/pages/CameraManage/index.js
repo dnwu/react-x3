@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-import { Button, Pagination, Modal } from 'antd'
+import { Button, Pagination, Form } from 'antd'
 import './index.scss'
+import CameraModal from './CameraModal'
+const FormItem = Form.Item;
 
 
 class CameraManage extends Component {
-    state = { visible: false }
 
+    state = {
+        visible: false,
+        modelTitle: '添加摄像头'
+    }
     showModal = () => {
         this.setState({
             visible: true,
+            modelTitle: '添加摄像头'
+        });
+    }
+    restCarmera =()=> {
+        this.setState({
+            visible: true,
+            modelTitle: '修改摄像头'
         });
     }
 
-    handleOk = (e) => {
-        console.log(e);
-        this.setState({
-            visible: false,
-        });
-    }
-
-    handleCancel = (e) => {
-        console.log(e);
-        this.setState({
-            visible: false,
-        });
-    }
 
     pageChange = (page) => {
         console.log(page);
     }
+
 
     listDom = () => {
         let arr = [1, 1, 1, 1, 1, 1]
@@ -54,7 +54,7 @@ class CameraManage extends Component {
                         <span className='blue'>测试</span>
                     </div>
                     <div className="operate">
-                        <span className='blue'>修改</span>
+                        <span onClick={this.restCarmera} className='blue'>修改</span>
                         <span className='red'>删除</span>
                     </div>
                 </div>
@@ -83,19 +83,9 @@ class CameraManage extends Component {
                         <div className="link-test">连接测试</div>
                         <div className="operate">操作</div>
                     </div>
-                    {/* 添加摄像头模态框 */}
-                    <Modal
-                        title="Basic Modal"
-                        visible={this.state.visible}
-                        cancelText='取消'
-                        okText='确定'
-                        onOk={this.handleOk}
-                        onCancel={this.handleCancel}
-                    >
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
-                    </Modal>
+                    {/* 添加修改摄像头模态框 */}
+                    <CameraModal visible={this.state.visible} title= {this.state.modelTitle} />
+                    {/* 测试模态框 */}
                     <div className="body">
                         {this.listDom()}
                     </div>
