@@ -63,7 +63,7 @@ class DeviceActivation extends Component {
                     {getFieldDecorator('id', {
                         rules: [{ required: true, message: '请输入project id' }],
                     })(
-                        <Input disabled= {this.state.style.disable} />
+                        <Input autoComplete='off' disabled= {this.state.style.disable} />
                     )}
                 </FormItem>
                 <FormItem

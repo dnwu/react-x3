@@ -22,5 +22,7 @@
         margin: 20px;
         background: #fff;
         min-height: 360;
+        display: flex;
+        flex-direction: column;
     }
 }
