@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Modal, Form, Input, Button, Radio } from 'antd';
+import { Modal, Form, Input, Button } from 'antd';
 import './relayModal.scss'
 
 const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
 
 class RelayModal extends Component {
     state = { visible: false }
