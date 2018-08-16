@@ -6,13 +6,13 @@ class TestModal extends Component {
     state = {}
     componentWillReceiveProps(nextProps) {
         this.setState({
-            testModalVisible: nextProps.testModalVisible
+            visible: nextProps.visible
         })
     }
 
     Iknow = () => {
         this.setState({
-            testModalVisible: false,
+            visible: false,
         });
         this.props.sonLinkTest(false)
     }
@@ -46,7 +46,7 @@ class TestModal extends Component {
                 footer={null}
                 width={300}
                 centered={true}
-                visible={this.state.testModalVisible}
+                visible={this.state.visible}
             >
 
                 <div className='err-icon err'>

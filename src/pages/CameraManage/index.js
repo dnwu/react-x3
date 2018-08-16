@@ -121,12 +121,12 @@ class CameraManage extends Component {
                     {/* 测试模态框 */}
                     <TestModal 
                         modelType = "type1"
-                        testModalVisible = {this.state.testModalVisible}
+                        visible = {this.state.testModalVisible}
                         sonLinkTest = {this.sonLinkTest}
                     />
                     {/* 删除模态框 */}
                     <DeleteModal 
-                        deleteModalVisible = {this.state.deleteModalVisible}
+                        visible = {this.state.deleteModalVisible}
                         sonDeleteModal = {this.sonDeleteModal}
                     />
                     <div className="body">

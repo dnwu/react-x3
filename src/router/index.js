@@ -9,6 +9,7 @@ import FaceManage from './../pages/FaceManage'
 import CameraManage from './../pages/CameraManage'
 import RelayManage from './../pages/RelayManage'
 import PositionInfo from './../pages/PositionInfo'
+import FaceInfo from './../pages/FaceInfo'
 
 class IRouter extends React.Component {
     render() {
@@ -28,7 +29,7 @@ class IRouter extends React.Component {
                                     <Route path='/devicedeploy/relay' component={RelayManage} />
 
                                     <Route path='/function/position' component={PositionInfo} />
-                                    <Route path='/function/faceInfo' component={DeviceActivation} />
+                                    <Route path='/function/faceInfo' component={FaceInfo} />
                                     <Route path='/function/wayInfo' component={DeviceActivation} />
 
                                     <Route path='/project/projectTest' component={DeviceActivation} />

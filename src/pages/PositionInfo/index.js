@@ -59,7 +59,7 @@ class PositionInfo extends Component {
                         {/* 删除模态框 */}
                         <DeleteModal
                             sonDeleteModal={this.sonDeleteModal}
-                            deleteModalVisible={this.state.deleteModalVisible}
+                            visible={this.state.deleteModalVisible}
                         />
 
                         {/* 添加位置信息模态框 */}

@@ -1,0 +1,9 @@
+.face-db-modal{
+    .ant-modal-body{
+        padding-left: 100px;
+        .ant-checkbox-group{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -109,12 +109,12 @@ class RelayManage extends Component {
                         <TestModal
                             modelType="type2"
                             title='继电器连接正常'
-                            testModalVisible={this.state.testModalVisible}
+                            visible={this.state.testModalVisible}
                             sonLinkTest={this.sonLinkTest}
                         />
                         {/* 删除模态框 */}
                         <DeleteModal
-                            deleteModalVisible={this.state.deleteModalVisible}
+                            visible={this.state.deleteModalVisible}
                             sonDeleteModal={this.sonDeleteModal}
                         />
                         {this.list()}

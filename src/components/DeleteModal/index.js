@@ -6,7 +6,7 @@ class DeleteModal extends Component {
     state = {}
     componentWillReceiveProps(nextProps) {
         this.setState({
-            visible: nextProps.deleteModalVisible
+            visible: nextProps.visible
         })
     }
     cancel = () => {

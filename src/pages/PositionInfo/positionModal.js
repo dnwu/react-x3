@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Modal, Button, Tree } from 'antd';
+import { Modal, Tree } from 'antd';
 import './positionModal.scss'
-import Item from '../../../node_modules/antd/lib/list/Item';
 const TreeNode = Tree.TreeNode;
 
 class positionModal extends Component {
