@@ -6,18 +6,36 @@ import './index.scss'
 const SubMenu = Menu.SubMenu;
 class Nav extends Component {
     state = {
+        hash: '/internet/activation',
+        defaultOpenKey: 'internet'
     }
     componentWillMount() {
-        // 刷新页面, 默认选中tab
-        let hash = window.location.hash.replace(/#|\?.*$/g, '')
-        // 刷新页面默认展开tab
-        let defaultOpenKey = hash.match(/\/(\S*)\//)[1]
-
-
-        this.setState({
-            hash,
-            defaultOpenKey
+        let hash, defaultOpenKey
+        try {
+            // 刷新页面, 默认选中tab
+            hash = window.location.hash.replace(/#|\?.*$/g, '')
+            // 刷新页面默认展开tab
+            defaultOpenKey = hash.match(/\/(\S*)\//)[1]
+            this.setState({
+                hash,
+                defaultOpenKey
+            })
+        } catch (err) {
+            console.log(err);
+        }
+        window.addEventListener('hashchange', () => {
+            hash = window.location.hash.replace(/#|\?.*$/g, '')
+            // 刷新页面默认展开tab
+            defaultOpenKey = hash.match(/\/(\S*)\//)[1]
+            // console.log(this);
+            this.setState({
+                hash,
+                defaultOpenKey
+            })
         })
+        // console.log(hash, defaultOpenKey);
+
+
     }
 
     menu = () => {
