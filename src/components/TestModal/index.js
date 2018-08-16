@@ -16,6 +16,28 @@ class TestModal extends Component {
         });
         this.props.sonLinkTest(false)
     }
+
+    type = () => {
+        if(this.props.modelType === "type1") {
+            return (
+                <div className= 'type1'>
+                    <div>
+                        <span>视频连接:</span>
+                        <span className='err'>正常</span>
+                    </div>
+                    <div>
+                        <span>解码:</span>
+                        <span className='success'>正常</span>
+                    </div>
+                </div>
+            )
+        }else if(this.props.modelType === "type2"){
+            return <div className='type2'>
+                    {this.props.title || '请传入title'}
+                   </div>
+        }
+    }
+
     render() {
         return (
             <Modal
@@ -27,19 +49,16 @@ class TestModal extends Component {
                 visible={this.state.testModalVisible}
             >
 
-                <div className='err'>
+                <div className='err-icon err'>
                     {/* <Icon type="check-circle" /> */}
                     <Icon type="exclamation-circle" />
                 </div>
-                <div>
-                    <span>视频连接:</span>
-                    <span className='err'>正常</span>
-                </div>
-                <div>
-                    <span>解码:</span>
-                    <span className='success'>正常</span>
-                </div>
-                <div>
+                
+                {
+                   this.type()
+                }
+                
+                <div className= 'btn'>
                     <Button onClick={this.Iknow} type='primary' size='small'>我知道了</Button>
                 </div>
             </Modal>

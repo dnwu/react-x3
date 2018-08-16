@@ -1,40 +1,44 @@
-
-.test-modal{
-    .ant-modal-content{
-        .ant-modal-body{
+.test-modal {
+    .ant-modal-content {
+        .ant-modal-body {
             text-align: center;
-            div:nth-of-type(1){
+            .err-icon {
                 font-size: 40px;
-                &.err{
+                &.err {
                     color: #F5222D;
                 }
-                &.success{
+                &.success {
                     color: #52C41A;
                 }
             }
-            div:nth-of-type(2),div:nth-of-type(3){
-                display: flex;
-                font-size: 12px;
-                margin-top: 4px;
-                span:nth-of-type(1){
-                    flex: 1;
-                    text-align: right;
-                    // margin-right: 3px;
-                    color: #666666;
-                }
-                span:nth-of-type(2){
-                    flex: 1;
-                    text-align: left;
-                    margin-left: 6px;
-                    &.err{
-                        color: #F5222D;
+            .type1 {
+                div:nth-of-type(1),
+                div:nth-of-type(2) {
+                    display: flex;
+                    font-size: 12px;
+                    margin-top: 4px;
+                    span:nth-of-type(1) {
+                        flex: 1;
+                        text-align: right; // margin-right: 3px;
+                        color: #666666;
                     }
-                    &.success {
-                        color: #1890FF;
+                    span:nth-of-type(2) {
+                        flex: 1;
+                        text-align: left;
+                        margin-left: 6px;
+                        &.err {
+                            color: #F5222D;
+                        }
+                        &.success {
+                            color: #1890FF;
+                        }
                     }
                 }
             }
-            div:nth-of-type(4){
+            .type2{
+                font-weight: 700;
+            }
+            .btn {
                 margin-top: 30px;
                 font-size: 12px;
             }

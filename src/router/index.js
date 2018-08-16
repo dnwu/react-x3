@@ -7,6 +7,7 @@ import DeviceActivation from './../pages/DeviceActivation'
 import InterDeploy from './../pages/InterDeploy'
 import FaceManage from './../pages/FaceManage'
 import CameraManage from './../pages/CameraManage'
+import RelayManage from './../pages/RelayManage'
 
 class IRouter extends React.Component {
     render() {
@@ -23,7 +24,7 @@ class IRouter extends React.Component {
 
                                     <Route path='/devicedeploy/face' component={FaceManage} />
                                     <Route path='/devicedeploy/carmera' component={CameraManage} />
-                                    <Route path='/devicedeploy/relay' component={DeviceActivation} />
+                                    <Route path='/devicedeploy/relay' component={RelayManage} />
 
                                     <Route path='/function/position' component={DeviceActivation} />
                                     <Route path='/function/faceInfo' component={DeviceActivation} />

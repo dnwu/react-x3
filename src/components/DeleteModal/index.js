@@ -13,7 +13,7 @@ class DeleteModal extends Component {
         this.setState({
             visible: false
         })
-        this.props.sonDeleteModal()
+        this.props.sonDeleteModal(false)
     }
     delete = () => {
         

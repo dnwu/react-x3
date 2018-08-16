@@ -120,6 +120,7 @@ class CameraManage extends Component {
                     />
                     {/* 测试模态框 */}
                     <TestModal 
+                        modelType = "type1"
                         testModalVisible = {this.state.testModalVisible}
                         sonLinkTest = {this.sonLinkTest}
                     />
