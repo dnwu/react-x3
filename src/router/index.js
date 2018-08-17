@@ -11,6 +11,7 @@ import RelayManage from './../pages/RelayManage'
 import PositionInfo from './../pages/PositionInfo'
 import FaceInfo from './../pages/FaceInfo'
 import WayInfo from './../pages/WayInfo'
+import ProjectTest from './../pages/ProjectTest'
 
 class IRouter extends React.Component {
     render() {
@@ -33,7 +34,7 @@ class IRouter extends React.Component {
                                     <Route path='/function/faceInfo' component={FaceInfo} />
                                     <Route path='/function/wayInfo' component={WayInfo} />
 
-                                    <Route path='/project/projectTest' component={DeviceActivation} />
+                                    <Route path='/project/projectTest' component={ProjectTest} />
                                     <Route path='/project/faceList' component={DeviceActivation} />
 
                                     <Route path='/system/system' component={DeviceActivation} />
