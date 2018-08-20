@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import App from './../App'
 import Main from './../containers/main'
+import Login from './../containers/login'
 
 import DeviceActivation from './../pages/DeviceActivation'
 import InterDeploy from './../pages/InterDeploy'
@@ -23,7 +24,7 @@ class IRouter extends React.Component {
             <Router>
                 <App>
                     <Switch>
-                        <Route path='/login' component={DeviceActivation} />
+                        <Route path='/login' component={Login} />
                         <Route path='/' render={() => 
                             <Main>
                                 <Switch>

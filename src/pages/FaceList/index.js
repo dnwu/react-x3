@@ -42,6 +42,7 @@ class FaceList extends Component {
                 className='img-list-modal'
                 title="人脸照片"
                 width={700}
+                footer={null}
                 visible={this.state.visible}
                 onOk={this.handleOk}
                 onCancel={this.handleCancel}
@@ -53,6 +54,9 @@ class FaceList extends Component {
                             <img src={item} alt='' key={index}/>
                         )
                     }))}
+                </div>
+                <div className="btn">
+                    <Button onClick={this.handleCancel} type='primary'>关闭</Button>
                 </div>
             </Modal>
         )
