@@ -15,6 +15,7 @@ import ProjectTest from './../pages/ProjectTest'
 import FaceList from './../pages/FaceList'
 import System from './../pages/System'
 import SystemLog from './../pages/SystemLog'
+import Storage from './../pages/Storage'
 
 class IRouter extends React.Component {
     render() {
@@ -42,7 +43,7 @@ class IRouter extends React.Component {
 
                                     <Route path='/system/system' component={System} />
                                     <Route path='/system/systemLog' component={SystemLog} />
-                                    <Route path='/system/storage' component={DeviceActivation} />
+                                    <Route path='/system/storage' component={Storage} />
                                     <Redirect to="/internet/activation" />
                                 </Switch>
                             </Main>
