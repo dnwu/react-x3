@@ -50,7 +50,7 @@ class FaceList extends Component {
                 <div className="img-list">
                     {item.map(((item, index) => {
                         return (
-                            <img src={item} key={index}/>
+                            <img src={item} alt='' key={index}/>
                         )
                     }))}
                 </div>
