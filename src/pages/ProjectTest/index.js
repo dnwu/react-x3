@@ -47,7 +47,7 @@ class ProjectTest extends Component {
         const uploadButton = (
             <div>
                 <Icon type={this.state.loading ? 'loading' : 'plus'} />
-                <div className="ant-upload-text">Upload</div>
+                <div className="ant-upload-text">导入照片</div>
             </div>
         )
         return (
@@ -58,12 +58,12 @@ class ProjectTest extends Component {
                 <div className="body">
                     <div className="title">通道测试</div>
                     <div className="step">
-                        <div className="step1" className={this.state.wayTestControl?'step1':'step1 did'}>
+                        <div className={this.state.wayTestControl?'step1':'step1 did'}>
                             <span>1</span>
                             <span>上传图片</span>
                             <span></span>
                         </div>
-                        <div className="step2" className={this.state.wayTestControl?'step2 dont':'step2'}>
+                        <div className={this.state.wayTestControl?'step2 dont':'step2'}>
                             <span>2</span>
                             <span>通道测试</span>
                             <span></span>

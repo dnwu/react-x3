@@ -12,6 +12,7 @@ import PositionInfo from './../pages/PositionInfo'
 import FaceInfo from './../pages/FaceInfo'
 import WayInfo from './../pages/WayInfo'
 import ProjectTest from './../pages/ProjectTest'
+import FaceList from './../pages/FaceList'
 
 class IRouter extends React.Component {
     render() {
@@ -35,7 +36,7 @@ class IRouter extends React.Component {
                                     <Route path='/function/wayInfo' component={WayInfo} />
 
                                     <Route path='/project/projectTest' component={ProjectTest} />
-                                    <Route path='/project/faceList' component={DeviceActivation} />
+                                    <Route path='/project/faceList' component={FaceList} />
 
                                     <Route path='/system/system' component={DeviceActivation} />
                                     <Route path='/system/systemLog' component={DeviceActivation} />
